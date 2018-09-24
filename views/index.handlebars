@@ -1,0 +1,51 @@
+<div class="container">
+    <h1>Welcome to Belen's Burger Shop! The home of the original Krabby Patty!</h1>
+    <div class="row">
+        <div class="col-md-4 ">
+            <div class="card-header">
+                <h3>Patrick is craving these!</h3>
+            </div>
+            {{!--
+            <div class="card-body"> --}} {{!--
+                <ul> --}} {{#each burgers}} {{#unless devoured}}
+                    <div class="card">
+                        {{!-- <li> --}}
+                            {{id}} - {{burger_name}}
+                            <button class="devour" data-id="{{id}}">
+                                Give it to Patrick?
+                            </button>
+                        {{!-- </li> --}}                        
+                    </div> {{/unless}} {{/each}} {{!-- </ul> --}} {{!-- </div>
+            --}}
+        </div>
+        <div class="col-md-4">
+            <div class="card-header" id="add">
+                <h2>Ask our awesome frycook Spongebob for a burger</h2>
+            </div>
+            <form class="krabby-patty-request-form">
+                <div class="form-group">
+                    <br>
+                    <label for="burger">What would you like?</label>
+                    <input type="text" id="burger" name="burger_name">
+
+                </div>
+                <button id="submit" type="submit">Tell Squidward your order</button>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <div class="card-header" id="devoured">
+                <h3>Patrick Star already took care of these:</h3>
+            </div>
+            {{!--
+            <div class="card-body"> --}} {{!--
+                <ul> --}} {{#each burgers}} {{#if devoured}}
+                    <div class="card">
+                        {{!-- <li> --}}
+                            {{id}} - {{burger_name}}
+                        {{!-- </li> --}}
+                    </div> {{/if}} {{/each}} {{!-- </ul>
+            </div> --}}
+        </div>
+    </div>
+    <br>
+</div>
